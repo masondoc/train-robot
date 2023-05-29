@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 173.86, "left": 82.59, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": 71.28,
+      "left": 395.54,
+      "attrs": { "hornColor": "black" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 300.5,
+      "left": 397.46,
+      "attrs": { "hornColor": "green" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": 185.54,
+      "left": 397.57,
+      "attrs": { "hornColor": "red" }
+    }
+  ],
+  "connections": [
+    [ "uno:9", "servo:PWM", "orange", [ "v-20", "*", "h0", "h-52" ] ],
+    [ "uno:5V", "servo:V+", "red", [ "v20", "h0", "*", "h-20" ] ],
+    [ "uno:GND.1", "servo:GND", "black", [ "v-28", "h0", "*", "h-35" ] ],
+    [ "uno:5V", "servo2:V+", "red", [ "v69.89", "h193.72" ] ],
+    [ "uno:10", "servo2:PWM", "green", [ "v0" ] ],
+    [ "servo2:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "uno:GND.1", "servo1:GND", "black", [ "v0" ] ],
+    [ "uno:11", "servo1:PWM", "green", [ "v0" ] ],
+    [ "uno:5V", "servo1:V+", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

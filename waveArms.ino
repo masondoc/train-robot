@@ -37,7 +37,7 @@ void waveArm(Servo servo, int start, int end) {
     delay(5);
   }
 
-  delay(10000);
+  delay(3000);
 }
 
 void loop() {
@@ -47,6 +47,6 @@ void loop() {
   myservo3.write(180);
 
   waveArm(myservo1, 0, 180);
-  waveArm(myservo2, 180, 0);
-  waveArm(myservo3, 180, 0);
+  waveArm(myservo2, 0, 180);
+  waveArm(myservo3, 0, 180);
 }
